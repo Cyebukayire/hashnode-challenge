@@ -10,25 +10,11 @@
     position: absolute;
     box-sizing: border-box;
   }
-  
-  .b {
-    border: 1vmin solid black;
-  }
-  
-  .r {
-    border-radius: 100%;
-  }
-  
-  .hb::before,
-  .ha::after {
-    content: "";
-    display: block;
-    position: absolute;
-  }
+
   
   /****/
   html, body {
-    background: #b7625e22;
+    background: white;
   }
   
   #image-alt {
@@ -43,7 +29,7 @@
   
   /* image container */
   .cartoon {
-    --blue: #b7625e;
+    --blue: #2962FF;
     --bluelight: #ee7f6e;
     --blueshadow: #5e252b;
     --line: #432325;
@@ -61,12 +47,34 @@
     opacity: 0.5;
   }
   
-  .forehead {
-    width: 50%;
-    height: 50%;
+  .logo {
+    width: 30%;
+    height: 30%;
     background: var(--blue);
-    top: 22%;
-    left: 34%;
+    top: 50%;
+    left: 30%;
     transform: rotate(45deg);
     border-radius: 50px;
+    animation: fall 5s;
+
   }
+
+  .logo .circle {
+    background-color: white;
+    width: 45%;
+    height: 45%;
+    top: 28%;
+    left: 28%;
+    position: absolute;
+    border-radius: 50px;
+  }
+
+  @keyframes fall{
+    0% {
+      top: -35%;
+    }
+    100% {
+      top: 50%;
+    }
+  }
+  
