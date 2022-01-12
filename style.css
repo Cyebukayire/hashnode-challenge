@@ -29,10 +29,14 @@
   
   /* image container */
   .cartoon {
+    
     --blue: #2962FF;
     --bluelight: #ee7f6e;
-    --blueshadow: #5e252b;
-    --line: #432325;
+    --skinshadow: #5e252b;
+    --line: #2f1b0d;
+    --skin: #eab38f;
+    --eyes: #1f1f1f;
+    --hair: #2f1b0d;
     width: 80vmin;
     height: 80vmin;
     border-radius: 50%;
@@ -50,12 +54,12 @@
   .logo {
     width: 30%;
     height: 30%;
-    background: var(--blue);
     top: 50%;
     left: 30%;
+    background: var(--blue);
     transform: rotate(45deg);
     border-radius: 50px;
-    animation: fall 5s;
+    /* animation: fall 5s linear infinite; */
 
   }
 
@@ -69,12 +73,43 @@
     border-radius: 50px;
   }
 
+  .logo .circle .head {
+    position: relative;
+    background-color: var(--skin);
+    width: 20%;
+    height: 30%;
+    /* border-radius: 50% 100%; */
+  }
+
   @keyframes fall{
     0% {
       top: -35%;
+      left: 30%;
     }
+    50% {
+      top: 50%;
+      left: 30%;
+      transform: none;
+    }
+    70% {
+      top: 50%;
+      left: 7%;
+      transform: rotate(-50deg);
+      animation-delay: 5s;
+    }
+     85% {
+       top: 50%;
+       left: 20%;
+     }
     100% {
       top: 50%;
+      left: 100%;
+      transform: rotate(380deg);
     }
+
   }
+
+
+
+
   
