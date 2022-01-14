@@ -4,6 +4,7 @@
     left: 50%;
     margin: 0;
     transform: translate(-50%, -50%);
+    background: white;
   }
   
   .cartoon div {
@@ -11,10 +12,8 @@
     box-sizing: border-box;
   }
 
-  
-  /****/
-  html, body {
-    background: white;
+    html, body {
+    background: rgb(235, 116, 209);
   }
   
   #image-alt {
@@ -27,7 +26,6 @@
     width: 1px;
   }
   
-  /* image container */
   .cartoon {
 
     --blue: #2962FF;
@@ -51,7 +49,7 @@
     background: var(--blue);
     transform: rotate(45deg);
     border-radius: 50px;
-    /* animation: fall 5s linear infinite; */
+    animation: animate-logo 5s linear infinite;
     position: relative;
 
   }
@@ -73,6 +71,7 @@
     top: 59%;
     left: 42%;
     position: relative;
+    animation: animate-rider 5s linear infinite;
   }
 
   .head {
@@ -109,7 +108,6 @@
     width: 30%;
     height: 20%;
     background: var(--skin);
-    /* background-color: red; */
     transform: rotate(34deg);
     top: 85%;
     left: -5%;
@@ -126,7 +124,7 @@
     border-radius:0 0 0 30%;    
   }
   .head .ear {
-    width: 45%;
+    width: 40%;
     height: 20%;
     border-radius: 0% 20% 70% 0;
     background: var(--skin);
@@ -141,8 +139,8 @@
     height: 10%;
     background: white;
     border-radius: 50px;
-    top: 95%;
-    left: 65%;
+    top: 94%;
+    left: 55%;
   }
 
   .neck {
@@ -158,13 +156,93 @@
   .jacket {
     width: 3%;
     height: 5%;
-    /* background:var(--skinshadow); */
     background: var(--blue);
     border-radius: 10% 50% 50% 10%;
     top: 7.8%;
     left: 3%;
     transform: rotate(-10deg);
+    position: relative;
 
+  }
+
+  .jacket .jacket-arm {
+    width: 100%;
+    height: 100%;
+    top:15%;
+    left: 20%;
+    position: absolute;
+  }
+
+  .jacket .jacket-arm .jacket-arm-line-1 {
+    width: 30%;
+    height: 3.5%;
+    background: var(--skinshadow);
+    top: 6%;
+    left: 3%;
+    transform: rotate(-10deg);
+  }
+
+  .jacket .jacket-arm .jacket-arm-line-2 {
+    width: 40%;
+    height: 3.5%;
+    background: var(--skinshadow);
+    top: 20%;
+    left: -16%;
+    transform: rotate(-100deg);
+  }
+
+  .jacket .jacket-arm .jacket-arm-line-3 {
+    width: 40%;
+    height: 3.5%;
+    background: var(--skinshadow);
+    top: 30%;
+    left: 3%;
+    transform: rotate(-10deg);
+  }
+
+  .left-arm {
+    width: 7%;
+    height: 6%;
+    top: 7%;
+    left: -2%;
+  }
+
+  .left-arm .arm-line-1 {
+    background: var(--skin);
+    width: 35%;
+    height: 18%;
+    top: 43%;
+    left: 44%;
+    transform: rotate(-20deg);
+    border-radius: 0% 0% 0% 50%;
+  }
+
+  .left-arm .arm-line-2 {
+    background: var(--skin);
+    width: 40%;
+    height: 16%;
+    top:38%;
+    left: 15%;
+    transform: rotate(29deg);
+  }
+
+  .left-arm .hand {
+    background: var(--skin);
+    width:25%;
+    height: 25%;
+    top:20%;
+    left:10%;
+    border-radius: 50%;
+  }
+
+  .right-arm {
+    background: var(--skin);
+    width: 1.5%;
+    height: 1%;
+    top:8%;
+    left: 1.5%;
+    border-radius: 50%;
+    transform: rotate(20deg);
   }
 
   .belt {
@@ -186,31 +264,386 @@
     transform: rotate(90deg);
     border-radius: 0% 100% 30% 30%;
   }
+
+  .thigh {
+    width: 2.5%;
+    height: 1.5%;
+    background: var(--skin);
+    top: 12.8%;
+    left: 0%;
+    border-radius: 50% 0% 0% 50%;
+  }
+
+  .leg {
+    width: 4%;
+    height: 1.5%;
+    background: var(--skin);
+    top: 14.3%;
+    left: -1.6%;
+    border-radius: 50% 0% 0% 50%;
+    transform: rotate(90deg);
+  }
+
+  .shoe {
+    width: 2.9%;
+    height: 1.5%;
+    background: var(--skinshadow);
+    top: 16.5%;
+    left: -1.6%;
+    border-radius: 90% 0% 15% 20%;
+  }
   
-  @keyframes fall{
+  .riding-handle {
+    top: 64%;
+    left: 37.5%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: animate-riding-handle 5s linear infinite;
+  }
+
+  .riding-handle .handle-1 {
+    background: var(--blue);
+    width: 2.5%;
+    height: 1%;
+    position: absolute;
+    border-radius: 0% 40% 0% 0%;
+  }
+
+  .riding-handle .handle-2 {
+    background: var(--blue);
+    width: 4%;
+    height: 1%;
+    position: absolute;
+    transform: rotate(40deg);
+    top: 1.3%;
+    left: 1.5%;
+  }
+
+  .riding-handle .handle-3 {
+    background: var(--blue);
+    width: 2.5%;
+    height: 0.7%;
+    position: absolute;
+    top: 3.5%;
+    left: 2.6%;
+    transform: rotate(-45deg);
+  }
+
+  .riding-handle .handle-4 {
+    background: var(--blue);
+    /* background: red; */
+    width: 2.5%;
+    height: 0.7%;
+    position: absolute;
+    top: 2.8%;
+    left: 4.8%;
+    transform: rotate(15deg);
+  }
+
+
+  @keyframes animate-logo{
     0% {
       top: -35%;
       left: 30%;
     }
-    50% {
+    40% {
       top: 50%;
       left: 30%;
       transform: none;
     }
+    50% {
+      top: 40%;
+      left: 30%;      
+    }
+    60% {
+      top: 50%;
+      left: 30%;
+    }
+    66% {
+      top: 46%;
+      left: 30%;
+    }
     70% {
       top: 50%;
-      left: 53%;
-      transform: rotate(50deg);
+      left: 30%;
     }
-     85% {
+    90% {
+      top: 50%;
+      left: 53%;
+      transform: rotate(90deg);
+    }
+    95% {
        top: 50%;
        left: 20%;
      }
     100% {      
       top: 50%;
-      left: -10%;
-      transform: rotate(-380deg);
+      left: -20%;
+      transform: rotate(-80deg);
       animation-delay: 5s;
     }
 
+  }
+    
+  @keyframes animate-rider{
+    0% {
+      top: -26%;
+      left: 42%;
+    }
+    
+    40% {
+      top: 59%;
+      left: 42%;
+    }
+
+    50% {
+      top: 49%;
+      left: 42%;      
+    }
+    60% {
+      top: 59%;
+      left: 42%;
+    }
+    66% {
+      top: 55%;
+      left: 42%;
+    }
+    70% {
+      top: 59%;
+      left: 42%;
+    }
+
+    90% {
+      top: 59%;
+      left: 65%;
+    }
+     95% {
+       top: 59%;
+       left: 32%;
+     }
+    100% {      
+      top: 59%;
+      left: -8%;
+    }
+
+  }
+
+  @keyframes animate-riding-handle{
+    0% {
+      top: -21%;
+      left: 37.5%;
+    }
+    40% {
+      top: 64%;
+      left: 37.5%;
+    }
+    50% {
+      top: 54%;
+      left: 37.5%;      
+    }
+    60% {
+      top: 64%;
+      left: 37.5%;
+    }
+    66% {
+      top: 60%;
+      left: 37.5%;
+    }
+    70% {
+      top: 64%;
+      left: 37.5%;
+    }
+    90% {
+      top: 64%;
+      left: 60.5%;
+    }
+     95% {
+       top: 64%;
+       left: 27.5%;
+     }
+    100% {      
+      top: 64%;
+      left: -12.5%;
+    }
+
+  }
+
+  .grasses{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:80%;
+    left: 0%;
+    /* background: #00e676; */
+  }
+
+  .grasses .blade {
+    height: 25%;
+    width: 1%;
+    background: #00e676;
+    border-radius: 100%;
+    animation: wind-five 7s ease alternate infinite;
+  }
+
+  .blade:nth-of-type(2n) {
+    transform: rotate(56deg);
+    left: 16%;
+    margin-top: 3rem;
+    height: 98%;
+    width: 6%;
+    animation: wind-seven 7s ease alternate infinite;
+
+  }
+  .blade:nth-of-type(3n) {
+    background-color: #00c853;
+    left: 14%;
+    transform: rotate(-10deg);
+    height: 95%;
+    animation: wind-three 7s ease alternate infinite;
+
+  }
+  
+  .blade:nth-of-type(4n) {
+    border-radius: 0 100% 0 50%;
+    transform: rotate(-8deg);
+    left: 15%;
+    height: 78%;
+    animation: wind-five 7s ease alternate infinite;
+  }
+  
+  .blade:nth-of-type(5n) {
+    transform: rotate(4deg);
+    border-radius: 0 100% 0 50%;
+    left:20%;  
+    animation: wind-three 7s ease alternate infinite;
+  }
+  
+  .blade:nth-of-type(6n) {
+    background-color: #00c853;
+    left: 25%;
+    transform: rotate(-10deg);
+    height: 30%;
+    animation: wind-seven 7s ease alternate infinite;
+  }
+  
+  .blade:nth-of-type(7n) {
+    background-color: #81c784;
+    border-radius: 100% 0 50% 0;
+    animation: wind-seven 7s ease alternate infinite;
+    left: 30%;
+    height: 80%;
+    
+  }
+  
+  .blade:nth-of-type(8n) {
+    background-color: #00c853;
+    left: 35%;
+    transform: rotate(-10deg);
+    height: 45%;
+  }
+  
+  .blade:nth-of-type(9n) {
+    background-color: #4caf50;
+      animation: wind-three 7s ease alternate infinite;
+      left: 40%;
+  }
+  
+  .blade:nth-of-type(13n) {
+    background-color: #66bb6a;
+    height: 7.5rem;
+    margin-top: 0.5rem;
+    left: 45%;
+    width: 3%;
+    animation: wind-five 7s ease alternate infinite;
+  
+  }
+  
+  .blade:nth-of-type(16n) {
+    width: 5%;
+    transform: rotate(-5deg);
+    height: 90%;
+    margin-top: 0;
+    animation: wind-five 7s ease alternate infinite;
+    left: 50%;
+  }
+  
+  .blade:nth-of-type(24n) {
+    transform: rotate(12deg);
+    height: 50%;
+    margin-top: 0.5;
+    width: 2%;
+    left:52%;  
+    animation: wind-five three ease alternate infinite;
+  }
+  .blade:nth-of-type(39n) {
+    background-color: #66bb6a;
+    height: 7.5rem;
+    left: 55%;
+    width: 2%;
+    animation: wind-five 7s ease alternate infinite;
+  }
+  .blade:nth-of-type(99n) {
+    transform: rotate(12deg);
+    height: 50%;
+    width: 5%;
+    left:55%;  
+    animation: wind-three 1 ease alternate infinite;
+  }
+
+  .blade:nth-of-type(34n) {
+    background-color: #66bb6a;
+    height: 7.5rem;
+    left: 60%;
+    width: 1%;
+    animation: wind-seven 7s ease alternate infinite;
+
+  }    
+  .blade:nth-of-type(54n) {
+    background-color: #66bb6a;
+    height: 79%;
+    left: 60%;
+    width: 1%;
+  }
+
+  .blade:nth-of-type(44n) {
+    transform: rotate(12deg);
+    height: 50%;
+    width: 5%;
+    left:65%;  
+    animation: wind-five three ease alternate infinite;
+  }
+  .blade:nth-of-type(49n) {
+    transform: rotate(12deg);
+    height: 50%;
+    width: 5%;
+    left:65%;  
+    animation: wind-three three ease alternate infinite;
+  }
+  .blade:nth-of-type(49n) {
+    transform: rotate(-12deg);
+    height: 50%;
+    width: 5%;
+    left:75%;  
+    animation: wind-three three ease alternate infinite;
+  }
+
+
+  
+  @keyframes wind-three {
+    100% {
+      transform: rotate(5deg);
+    }
+  }
+  
+  @keyframes wind-five {
+    100% {
+      transform: rotate(-10deg);
+    }
+  }
+  
+  @keyframes wind-seven {
+    100% {
+      transform: rotate(7deg);
+    }
   }
